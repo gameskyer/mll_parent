@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo登陆</title>
+</head>
+<body>
+<h1>自定义登陆界面</h1>
+<form action="/authentication/from" method="post">
+    用户名:<input type="text" name="username" value="admin">
+    密码：<input type="password" name="password" value="123456">
+    <input type="submit" value="登陆">
+</form>
+<h1>图片验证码</h1>
+<form action="/authentication/from" method="post">
+    用户名:<input type="text" name="username" value="admin">
+    密码：<input type="password" name="password" value="123456">
+    验证码：<input type="text" name="imageCode">
+    <img src="/code/image">
+    <input type="submit" value="登陆">
+</form>
+
+<h1>短信登陆</h1>
+<form action="/authentication/mobile" method="post">
+    手机号:<input type="text" name="mobile" value="13983614765">
+    验证码：<input type="text" name="smsCode">
+    <a href="/code/sms?mobile=13983614765">发送验证码</a>
+    <input type="submit" value="登陆">
+</form>
+<h1>社交登陆</h1>
+<a href="/auth/qq">QQ登陆</a>
+</body>
+</html>
